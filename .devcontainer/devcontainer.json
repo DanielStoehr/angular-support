@@ -1,3 +1,15 @@
 {
-    "image":"node:18-alpine"
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "workspaceFolder": "/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Angular.ng-template"
+            ]
+        }
+    }
 }
